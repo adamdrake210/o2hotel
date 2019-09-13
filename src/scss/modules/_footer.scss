@@ -1,0 +1,22 @@
+.footer {
+  margin: 3em auto;
+  padding: 32px;
+  background-color: $background3;
+  color: $white;
+  &__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__calendar {
+    width: 63px;
+    height: 70px;
+    margin: 0 3em;
+  }
+  &__text {
+    font-size: 2rem;
+    h3 {
+      font-weight: 300;
+    }
+  }
+}

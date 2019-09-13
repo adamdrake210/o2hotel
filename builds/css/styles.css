@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Barlow:400,500,600&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,600&display=swap&subset=latin-ext");
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -371,3 +371,24 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto; }
+
+nav {
+  background-color: #0f2356; }
+
+.footer {
+  margin: 3em auto;
+  padding: 32px;
+  background-color: rgba(144, 117, 67, 0.63);
+  color: #ffffff; }
+  .footer__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .footer__calendar {
+    width: 63px;
+    height: 70px;
+    margin: 0 3em; }
+  .footer__text {
+    font-size: 2rem; }
+    .footer__text h3 {
+      font-weight: 300; }
