@@ -1,54 +1,54 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var uglifycss = require('gulp-uglifycss');
-var sourcemaps = require('gulp-sourcemaps');
-var sassGlob = require('gulp-sass-glob');
-var gutil = require('gulp-util');
-var plumber = require('gulp-plumber');
-var notify = require('gulp-notify');
+const gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  browserSync = require('browser-sync').create(),
+  source = './src/',
+  dest = './builds/';
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
-  browserSync.init({
-    server: './dist'
-  });
+sass.compiler = require('node-sass');
 
-  gulp.watch('./scss/*.scss', ['sass']);
-  gulp.watch('dist/*.html').on('change', browserSync.reload);
-});
+function html() {
+  return gulp.src(dest + '**/*.html');
+}
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+function js() {
+  return gulp.src(dest + '**/*.js');
+}
+
+function styles() {
   return gulp
-    .src('./scss/styles.scss')
-    .pipe(
-      autoprefixer({
-        browsers: ['> 1%', 'last 3 versions', 'Firefox >= 20', 'iOS >=7'],
-        cascade: false
-      })
-    )
-    .on('error', gutil.log)
-    .pipe(sassGlob())
+    .src(source + 'scss/styles.scss')
     .pipe(sourcemaps.init())
     .pipe(
-      plumber({
-        errorHandler: function(err) {
-          notify.onError({
-            title: 'Gulp error in ' + err.plugin,
-            message: err.toString()
-          })(err);
-
-          // play a sound once
-          gutil.beep();
-        }
-      })
+      sass({
+        sourcemap: true,
+        style: 'compressed'
+      }).on('error', sass.logError)
     )
-    .pipe(sass())
-    .on('error', gutil.log)
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream());
-});
+    .pipe(gulp.dest(dest + 'css'));
+}
 
-gulp.task('default', ['serve']);
+function watch() {
+  gulp.watch(dest + 'js/**/*.js', js).on('change', browserSync.reload);
+  gulp.watch(source + 'sass/**/*', styles).on('change', browserSync.reload);
+  gulp.watch(dest + 'index.html', html).on('change', browserSync.reload);
+}
+
+function server() {
+  browserSync.init({
+    notify: false,
+    server: {
+      baseDir: dest
+    }
+  });
+
+  gulp
+    .watch(source + 'sass/**/*.scss', styles)
+    .on('change', browserSync.reload);
+  gulp.watch(dest + 'js/**/*.js', js).on('change', browserSync.reload);
+  gulp.watch(dest + 'index.html', html).on('change', browserSync.reload);
+}
+
+var build = gulp.series(gulp.parallel(js, styles, html), server, watch);
+
+gulp.task('default', build);
