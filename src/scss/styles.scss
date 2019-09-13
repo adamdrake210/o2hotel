@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,600&display=swap&subset=latin-ext');
+@import 'variables';
+@import 'normalize';
+@import 'mixins';
+@import 'base';
 
-@import 'variables.scss';
-@import 'standards.scss';
-
-/*Main structure*/
+@import 'modules/backgrounds';

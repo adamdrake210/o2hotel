@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $barlow;
+  color: $fontcolor1;
+  background-color: $offwhite;
+  min-width: 320px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
