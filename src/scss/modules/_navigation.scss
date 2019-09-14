@@ -2,6 +2,7 @@
   background-color: $darkblue;
   display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
   a {
     color: $offwhite2;
     text-decoration: none;
@@ -15,14 +16,21 @@
   &__left {
     display: flex;
     list-style: none;
-    margin: 10px 0px;
-    padding-left: 20px;
+    padding: 0;
+    margin: 0;
+    @include break($md-breakpoint) {
+      flex-direction: column;
+    }
     li {
       padding: 0 10px;
+      @include break($md-breakpoint) {
+        padding: 3px 10px;
+      }
     }
   }
   &__right {
-    margin: 10px;
+    margin: 0;
+    padding-top: 4px;
     a {
       @include flexcenter;
     }

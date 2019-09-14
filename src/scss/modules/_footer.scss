@@ -5,6 +5,9 @@
   color: $white;
   &__grid {
     @include flexcenter;
+    @include break($md-breakpoint) {
+      flex-direction: column;
+    }
   }
   &__calendar {
     width: 63px;
@@ -12,9 +15,13 @@
     margin: 0 3em;
   }
   &__text {
-    font-size: 2rem;
     h3 {
+      font-size: 2rem;
       font-weight: 400;
+      @include break($md-breakpoint) {
+        font-size: 1.9rem;
+        text-align: center;
+      }
     }
   }
 }

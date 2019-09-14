@@ -372,10 +372,23 @@ body {
   max-width: 1280px;
   margin: 0 auto; }
 
+.desktop {
+  display: block; }
+  @media (max-width: 767px) {
+    .desktop {
+      display: none; } }
+
+.mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .mobile {
+      display: block; } }
+
 .navigation {
   background-color: #0f2356;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 10px 20px; }
   .navigation a {
     color: #e1e1e1;
     text-decoration: none;
@@ -387,12 +400,19 @@ body {
   .navigation__left {
     display: flex;
     list-style: none;
-    margin: 10px 0px;
-    padding-left: 20px; }
+    padding: 0;
+    margin: 0; }
+    @media (max-width: 767px) {
+      .navigation__left {
+        flex-direction: column; } }
     .navigation__left li {
       padding: 0 10px; }
+      @media (max-width: 767px) {
+        .navigation__left li {
+          padding: 3px 10px; } }
   .navigation__right {
-    margin: 10px; }
+    margin: 0;
+    padding-top: 4px; }
     .navigation__right a {
       display: flex;
       justify-content: center;
@@ -402,25 +422,49 @@ body {
 
 .section1 {
   background-color: #f6efde;
+  padding-top: 1em;
   padding-bottom: 1.5em; }
   .section1__title {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 767px) {
+      .section1__title {
+        flex-direction: column;
+        padding: 16px; } }
     .section1__title .left__title {
       border-right: 2px solid #e9e0d0;
       padding: 0 2em;
       margin: 2em; }
+      @media (max-width: 767px) {
+        .section1__title .left__title {
+          border-bottom: 2px solid #e9e0d0;
+          border-right: none;
+          margin: 0;
+          padding: 0; } }
       .section1__title .left__title h1 {
         font-size: 3.1rem;
         font-weight: 500;
         margin: 0;
         text-transform: uppercase; }
+        @media (max-width: 960px) {
+          .section1__title .left__title h1 {
+            font-size: 2.6rem; } }
+        @media (max-width: 767px) {
+          .section1__title .left__title h1 {
+            font-size: 2rem; } }
       .section1__title .left__title h2 {
         font-size: 2.2rem;
         font-weight: 500;
         margin: 0;
         margin-top: 0.2em; }
+        @media (max-width: 960px) {
+          .section1__title .left__title h2 {
+            font-size: 1.8rem; } }
+        @media (max-width: 767px) {
+          .section1__title .left__title h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1em; } }
     .section1__title .right__title {
       display: flex;
       justify-content: center;
@@ -428,6 +472,11 @@ body {
       color: #505050;
       font-weight: 500;
       width: 200px; }
+      @media (max-width: 767px) {
+        .section1__title .right__title {
+          width: 100%;
+          padding-top: 16px;
+          justify-content: flex-start; } }
       .section1__title .right__title img {
         width: 30px;
         height: 40px;
@@ -442,21 +491,35 @@ body {
       font-size: 1.4rem;
       margin-top: 0;
       font-weight: 500; }
+      @media (max-width: 767px) {
+        .section1__subheader h3 {
+          font-size: 1.2rem; } }
   .section1__jumboimage {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 767px) {
+      .section1__jumboimage {
+        margin-top: -1em;
+        padding: 0 8px; } }
     .section1__jumboimage img {
       width: 980px;
       max-width: 100%;
       max-height: 450px;
       transition: 0.5s all ease; }
+      @media (max-width: 600px) {
+        .section1__jumboimage img {
+          height: 190px; } }
   .section1__thirds {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2em auto;
     max-width: 980px; }
+    @media (max-width: 767px) {
+      .section1__thirds {
+        flex-direction: column;
+        padding: 0 2em; } }
     .section1__thirds__item {
       flex: 0 0 33.33%;
       display: flex;
@@ -488,6 +551,9 @@ body {
     align-items: center;
     margin: 3em auto 2em;
     max-width: 980px; }
+    @media (max-width: 767px) {
+      .section1__activities {
+        flex-direction: column; } }
     .section1__activities span {
       color: #505050;
       font-weight: 500; }
@@ -495,6 +561,10 @@ body {
       display: flex;
       justify-content: space-around;
       width: 430px; }
+      @media (max-width: 767px) {
+        .section1__activities__part {
+          width: 100%;
+          margin-bottom: 1em; } }
       .section1__activities__part__item {
         display: flex;
         justify-content: center;
@@ -509,10 +579,20 @@ body {
       .section1__activities__part .fitness {
         margin-left: 30px;
         margin-right: 45px; }
+        @media (max-width: 767px) {
+          .section1__activities__part .fitness {
+            margin-left: 36px;
+            margin-right: 56px; } }
+        @media (max-width: 360px) {
+          .section1__activities__part .fitness {
+            margin-right: 15px; } }
 
 .section2 {
   background-color: #fbf8f2;
   padding-top: 1em; }
+  @media (max-width: 767px) {
+    .section2 {
+      padding: 1em 8px 0; } }
   .section2__title {
     display: flex;
     justify-content: center;
@@ -521,6 +601,9 @@ body {
       color: #505050;
       font-size: 2.1rem;
       font-weight: 500; }
+      @media (max-width: 767px) {
+        .section2__title h2 {
+          font-size: 1.8rem; } }
   .section2__images {
     display: flex;
     justify-content: center;
@@ -536,7 +619,7 @@ body {
         .section2__images .image {
           margin: 6px; } }
       .section2__images .image img {
-        width: 460px;
+        width: 466px;
         max-width: 100%;
         max-height: 450px;
         transition: 0.5s all ease; }
@@ -550,11 +633,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 767px) {
+      .footer__grid {
+        flex-direction: column; } }
   .footer__calendar {
     width: 63px;
     height: 70px;
     margin: 0 3em; }
-  .footer__text {
-    font-size: 2rem; }
-    .footer__text h3 {
-      font-weight: 400; }
+  .footer__text h3 {
+    font-size: 2rem;
+    font-weight: 400; }
+    @media (max-width: 767px) {
+      .footer__text h3 {
+        font-size: 1.9rem;
+        text-align: center; } }

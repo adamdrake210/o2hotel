@@ -1,12 +1,18 @@
 .section2 {
   background-color: $background2;
   padding-top: 1em;
+  @include break($md-breakpoint) {
+    padding: 1em 8px 0;
+  }
   &__title {
     @include flexcenter;
     h2 {
       color: $fontcolor2;
       font-size: 2.1rem;
       font-weight: 500;
+      @include break($md-breakpoint) {
+        font-size: 1.8rem;
+      }
     }
   }
   &__images {
@@ -25,7 +31,7 @@
         margin: 6px;
       }
       img {
-        width: 460px;
+        width: 466px;
         max-width: 100%;
         max-height: 450px;
         transition: 0.5s all ease;

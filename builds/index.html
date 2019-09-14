@@ -14,7 +14,7 @@
     <ul class="navigation__left">
       <li><a href="#">O2 arena</a></li>
       <li><a href="#">O2 universum</a></li>
-      <li><a href="#">Hotel</a></li>
+      <li class="desktop"><a href="#">Hotel</a></li>
     </ul>
     <div class="navigation__right">
       <a href="#">
@@ -34,6 +34,9 @@
         <div class="left__title">
           <h1>Moderní hotel ✶✶✶✶</h1>
           <h2>přímo u O2 arena a O2 universum</h2>
+          <div class="section1__subheader">
+            <h3 class="mobile">Ideální ubytování pro návštěvníky mezinárodních akcí konaných v Praze.</h3>
+          </div>
         </div>
         <div class="right__title">
           <img class="title__calendar" src="./images/calendar.svg" alt="Calendar">
@@ -42,11 +45,17 @@
       </div>
 
       <div class="section1__subheader">
-        <h3>Ideální ubytování pro návštěvníky mezinárodních akcí konaných v Praze.</h3>
+        <h3 class="desktop">Ideální ubytování pro návštěvníky mezinárodních akcí konaných v Praze.</h3>
       </div>
 
       <div class="section1__jumboimage">
-        <img src="./images/zvenku.jpg" alt="O2 Hotel">
+        <picture>
+          <source srcset="./images/zvenku.jpg">
+          <img src="./images/zvenku.jpg" alt="O2 Hotel">
+        </picture>
+
+
+        
       </div> 
 
       <div class="section1__thirds">
