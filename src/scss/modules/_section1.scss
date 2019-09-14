@@ -1,5 +1,6 @@
 .section1 {
   background-color: $background1;
+  padding-bottom: 1.5em;
   &__title {
     @include flexcenter;
     .left__title {
@@ -48,6 +49,71 @@
       max-width: 100%;
       max-height: 450px;
       transition: 0.5s all ease;
+    }
+  }
+  &__thirds {
+    @include flexcenter;
+    margin: 2em auto;
+    max-width: 980px;
+    &__item {
+      flex: 0 0 33.33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .description {
+        @include flexcenter;
+        flex-direction: column;
+        padding: 1.2em 0;
+        h4 {
+          font-size: 1.4rem;
+          font-weight: 500;
+          margin: 0;
+        }
+        span {
+          color: $grey;
+          font-weight: 500;
+          font-size: 0.9rem;
+          padding-top: 5px;
+        }
+      }
+      .image {
+        img {
+          width: 350px;
+          max-width: 100%;
+          max-height: 250px;
+          transition: 0.5s all ease;
+        }
+      }
+    }
+  }
+  &__activities {
+    @include flexcenter;
+    margin: 3em auto 2em;
+    max-width: 980px;
+    span {
+      color: $grey;
+      font-weight: 500;
+    }
+    &__part {
+      display: flex;
+      justify-content: space-around;
+      width: 430px;
+      &__item {
+        @include flexcenter;
+        .image {
+          margin-right: 18px;
+          width: 35px;
+          height: 35px;
+        }
+        .chair {
+          width: 38px;
+          height: 38px;
+        }
+      }
+      .fitness {
+        margin-left: 30px;
+        margin-right: 45px;
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 .section2 {
   background-color: $background2;
+  padding-top: 1em;
   &__title {
     @include flexcenter;
     h2 {
