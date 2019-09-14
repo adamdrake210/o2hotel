@@ -1,12 +1,10 @@
 .footer {
-  margin: 3em auto;
+  margin: 3em auto 0;
   padding: 32px;
   background-color: $background3;
   color: $white;
   &__grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexcenter;
   }
   &__calendar {
     width: 63px;
@@ -16,7 +14,7 @@
   &__text {
     font-size: 2rem;
     h3 {
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 }

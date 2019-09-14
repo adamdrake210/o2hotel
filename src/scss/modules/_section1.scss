@@ -1,0 +1,53 @@
+.section1 {
+  background-color: $background1;
+  &__title {
+    @include flexcenter;
+    .left__title {
+      border-right: 2px solid lighten($darkgold, 45%);
+      padding: 0 2em;
+      margin: 2em;
+      h1 {
+        font-size: 3.1rem;
+        font-weight: 500;
+        margin: 0;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin: 0;
+        margin-top: 0.2em;
+      }
+    }
+    .right__title {
+      @include flexcenter;
+      color: $grey;
+      font-weight: 500;
+      width: 200px;
+      img {
+        width: 30px;
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__subheader {
+    @include flexcenter;
+    color: $grey;
+    margin-bottom: 1em;
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 0;
+      font-weight: 500;
+    }
+  }
+  &__jumboimage {
+    @include flexcenter;
+    img {
+      width: 980px;
+      max-width: 100%;
+      max-height: 450px;
+      transition: 0.5s all ease;
+    }
+  }
+}

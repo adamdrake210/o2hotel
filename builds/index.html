@@ -10,22 +10,84 @@
 </head>
 <body>
 <header>
-  <nav>
-    <p>This is the nav</p>
+  <nav class="navigation">
+    <ul class="navigation__left">
+      <li><a href="#">O2 arena</a></li>
+      <li><a href="#">O2 universum</a></li>
+      <li><a href="#">Hotel</a></li>
+    </ul>
+    <div class="navigation__right">
+      <a href="#">
+        <img class="flag" src="./images/british_flag.png" alt="British Flag">
+        <span>English</span>
+      </a>
+    </div>
   </nav>
+
 </header>
 
-<main class="container">
-  <section id="section1">
-    <div>
-      <h1>Moderní hotel ✶✶✶✶</h1>
+<main>
+  <section id="section1" class="section1">
+    <div class="container">
+
+      <div class="section1__title">
+        <div class="left__title">
+          <h1>Moderní hotel ✶✶✶✶</h1>
+          <h2>přímo u O2 arena a O2 universum</h2>
+        </div>
+        <div class="right__title">
+          <img class="title__calendar" src="./images/calendar.svg" alt="Calendar">
+          <span>Zahájení provozu v roce 2021</span>
+        </div>
+      </div>
+
+      <div class="section1__subheader">
+        <h3>Ideální ubytování pro návštěvníky mezinárodních akcí konaných v Praze.</h3>
+      </div>
+
+      <div class="section1__jumboimage">
+        <img src="./images/zvenku.jpg" alt="O2 Hotel">
+      </div>  
+    </div> <!-- container -->
+  </section>
+
+  <section id="section2" class="section2">
+    <div class="container">
+      <div class="section2__title">
+        <h2>FOTOGRAFIE HOTELU</h2>
+      </div>
+      <div class="section2__images">
+        <div class="imagerow">
+          <div class="image">
+            <img src="./images/pic4.jpg" alt="">
+          </div>
+          <div class="image">
+            <img src="./images/pic5.jpg" alt="">
+          </div>
+        </div>
+        <div class="imagerow">
+          <div class="image">
+            <img src="./images/pic6.jpg" alt="">
+          </div>
+          <div class="image">
+            <img src="./images/pic7.jpg" alt="">
+          </div>
+        </div>
+        <div class="imagerow">
+          <div class="image">
+            <img src="./images/pic8.jpg" alt="">
+          </div>
+          <div class="image">
+            <img src="./images/pic9.jpg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  
 
   <footer class="footer">
-    <div class="footer__grid">
+    <div class="footer__grid container">
       <img class="footer__calendar" src="./images/calendar_white.svg" alt="Calendar">
       <div class="footer__text">
         <h3>HOTEL OTEVÍRÁME <br>již v roce 2021</h3>

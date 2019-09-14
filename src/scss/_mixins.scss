@@ -18,6 +18,12 @@
   }
 }
 
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin imagegrid($qty, $margin) {
   width: ((100% - (($qty - 1) * $margin)) / $qty);
   &:nth-child(n) {
@@ -32,7 +38,7 @@
 
 @mixin break($args...) {
   @if length($args) == 1 {
-    @media (min-width: nth($args, 1)) {
+    @media (max-width: nth($args, 1)) {
       @content;
     }
   } @else {
