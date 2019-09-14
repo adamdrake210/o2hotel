@@ -1,9 +1,11 @@
 const gulp = require('gulp'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
-  browserSync = require('browser-sync').create(),
-  source = './src/',
-  dest = './builds/';
+  autoprefixer = require('gulp-autoprefixer'),
+  uglifycss = require('gulp-uglifycss');
+(browserSync = require('browser-sync').create()),
+  (source = './src/'),
+  (dest = './builds/');
 
 sass.compiler = require('node-sass');
 
@@ -24,6 +26,17 @@ function styles() {
         sourcemap: true,
         style: 'compressed'
       }).on('error', sass.logError)
+    )
+    .pipe(
+      autoprefixer({
+        cascade: false
+      })
+    )
+    .pipe(
+      uglifycss({
+        maxLineLen: 80,
+        uglyComments: true
+      })
     )
     .pipe(gulp.dest(dest + 'css'));
 }

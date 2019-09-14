@@ -30,7 +30,9 @@
   }
   &__right {
     margin: 0;
-    padding-top: 4px;
+    @include break($md-breakpoint) {
+      padding-top: 4px;
+    }
     a {
       @include flexcenter;
     }
