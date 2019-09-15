@@ -29,7 +29,7 @@
         margin: 0;
         text-transform: uppercase;
         @include break(960px) {
-          font-size: 45px;
+          font-size: 44px;
         }
         @include break($md-breakpoint) {
           font-size: 30px;
