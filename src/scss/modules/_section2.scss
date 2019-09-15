@@ -2,16 +2,16 @@
   background-color: $background2;
   padding-top: 1em;
   @include break($md-breakpoint) {
-    padding: 1em 8px 0;
+    padding: 1em 7px 0;
   }
   &__title {
     @include flexcenter;
     h2 {
       color: $fontcolor2;
-      font-size: 2.1rem;
+      font-size: 40px;
       font-weight: 500;
       @include break($md-breakpoint) {
-        font-size: 1.8rem;
+        font-size: 25px;
       }
     }
   }
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 980px;
+    max-width: 1280px;
     margin: 0 auto;
     .imagerow {
       display: flex;
@@ -31,9 +31,9 @@
         margin: 6px;
       }
       img {
-        width: 466px;
+        width: 693px;
         max-width: 100%;
-        max-height: 450px;
+        max-height: 360px;
         transition: 0.5s all ease;
       }
     }
