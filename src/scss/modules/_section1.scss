@@ -103,7 +103,7 @@
     max-width: 1280px;
     @include break(1010px) {
       flex-direction: column;
-      padding: 0 34px;
+      padding: 0 20px;
       margin-top: 1em;
     }
     &__item {
@@ -177,6 +177,7 @@
           @include break($md-breakpoint) {
             width: 15px;
             height: 24px;
+            margin-left: 6px;
           }
         }
         .image__chair {
@@ -195,6 +196,7 @@
           @include break($md-breakpoint) {
             width: 27px;
             height: 11px;
+            margin-right: 12px;
           }
         }
         .image__car {
@@ -204,6 +206,8 @@
           @include break($md-breakpoint) {
             width: 23px;
             height: 18px;
+            margin-left: 4px;
+            margin-right: 22px;
           }
         }
         span {
@@ -226,6 +230,9 @@
         flex-direction: column;
         width: 136px;
         align-items: flex-start;
+        @include break(340px) {
+          width: 124px;
+        }
       }
       .section1__activities__part__item {
         margin-bottom: 20px;
