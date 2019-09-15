@@ -1,6 +1,6 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500,600&display=swap&subset=latin-ext');
-
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 // Breakpoints
 $xlg-breakpoint: 1280px;
 $lg-breakpoint: 1080px;
@@ -24,7 +24,8 @@ $background2: $offwhite;
 $background3: $footergold;
 
 // Font
-$barlow: 'Barlow', sans-serif;
+$dosis: 'Dosis', sans-serif;
+$opensans: 'Open Sans', sans-serif;
 
 // Others
 $enable-flex: true;

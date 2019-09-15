@@ -1,6 +1,6 @@
 .footer {
   margin: 3em auto 0;
-  padding: 32px;
+  padding: 54px 32px;
   background-color: $background3;
   color: $white;
   &__grid {
@@ -10,16 +10,20 @@
     }
   }
   &__calendar {
+    margin: 0 3em;
     width: 63px;
     height: 70px;
-    margin: 0 3em;
+    @include break($md-breakpoint) {
+      width: 44px;
+      height: 49px;
+    }
   }
   &__text {
     h3 {
-      font-size: 2rem;
+      font-size: 54px;
       font-weight: 400;
       @include break($md-breakpoint) {
-        font-size: 1.9rem;
+        font-size: 34px;
         text-align: center;
       }
     }
